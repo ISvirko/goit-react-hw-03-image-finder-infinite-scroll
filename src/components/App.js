@@ -34,16 +34,20 @@ class App extends Component {
   fetchImages = async () => {
     const { searchQuery, page, perPage } = this.state;
 
-    const result = await imagesApi.fetchImagesWithQuery(
-      searchQuery,
-      page,
-      perPage
-    );
+    try {
+      const result = await imagesApi.fetchImagesWithQuery(
+        searchQuery,
+        page,
+        perPage
+      );
 
-    this.setState((prev) => ({
-      images: [...prev.images, ...result],
-      page: prev.page + 1,
-    }));
+      this.setState((prev) => ({
+        images: [...prev.images, ...result],
+        page: prev.page + 1,
+      }));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   handleSearchSubmit = (query) => {
