@@ -68,7 +68,7 @@ class App extends Component {
 
   toggleButton = () => {
     this.setState((prev) => ({ atTheTop: !prev.atTheTop }));
-    !this.state.atTheTop ? window.scrollTo(0, 0) : smoothScroll();
+    this.state.atTheTop ? smoothScroll() : window.scrollTo(0, 0);
   };
 
   render() {
@@ -87,19 +87,17 @@ class App extends Component {
         <Searchbar onSubmit={this.handleSearchSubmit} />
 
         <>
-          <div>
-            <InfiniteScroll
-              dataLength={images.length}
-              next={this.fetchImages}
-              hasMore={true}
-              loader={<Spinner />}
-            >
-              <ImageGallery
-                images={images}
-                onGetLargeImageUrl={this.getLargeImageUrl}
-              />
-            </InfiniteScroll>
-          </div>
+          <InfiniteScroll
+            dataLength={images.length}
+            next={this.fetchImages}
+            hasMore={true}
+            loader={<Spinner />}
+          >
+            <ImageGallery
+              images={images}
+              onGetLargeImageUrl={this.getLargeImageUrl}
+            />
+          </InfiniteScroll>
 
           {images.length > 0 && (
             <ToTopButton atTheTop={atTheTop} toggleButton={this.toggleButton} />
