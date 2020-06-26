@@ -9,7 +9,7 @@ const Notification = ({ message, error, type }) => {
     message: `${error}`,
     type: `${type}`,
     insert: "top",
-    container: "top-center",
+    container: "top-right",
     animationIn: ["animated", "fadeIn"],
     animationOut: ["animated", "fadeOut"],
     dismiss: {

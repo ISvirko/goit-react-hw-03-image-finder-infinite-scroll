@@ -7,7 +7,7 @@ const fetchImagesWithQuery = (searchQuery, page = 1, perPage) => {
     .get(
       `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${searchQuery}&page=${page}&per_page=${perPage}&key=${apiKey}`
     )
-    .then((response) => response.data.hits);
+    .then((response) => response);
 };
 
 export default { fetchImagesWithQuery };

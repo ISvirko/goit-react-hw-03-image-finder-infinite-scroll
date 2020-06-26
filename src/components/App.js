@@ -25,14 +25,23 @@ class App extends Component {
     perPage: 12,
     largeImg: null,
     atTheTop: false,
+    hasMore: true,
   };
 
   componentDidMount() {
     this.fetchImages();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { searchQuery } = this.state;
+    if (prevState.searchQuery !== searchQuery) {
+      this.fetchImages();
+    }
+  }
+
   fetchImages = async () => {
     const { searchQuery, page, perPage } = this.state;
+    this.setState({ hasMore: true });
 
     try {
       const result = await imagesApi.fetchImagesWithQuery(
@@ -42,8 +51,9 @@ class App extends Component {
       );
 
       this.setState((prev) => ({
-        images: [...prev.images, ...result],
+        images: [...prev.images, ...result.data.hits],
         page: prev.page + 1,
+        hasMore: result.data.total > 0 ? true : false,
       }));
     } catch (error) {
       console.log(error);
@@ -72,7 +82,7 @@ class App extends Component {
   };
 
   render() {
-    const { images, error, largeImg, atTheTop } = this.state;
+    const { images, error, largeImg, atTheTop, hasMore } = this.state;
 
     return (
       <div className="App">
@@ -83,14 +93,25 @@ class App extends Component {
             type={"danger"}
           />
         )}
+        <>
+          <Searchbar onSubmit={this.handleSearchSubmit} />
 
-        <Searchbar onSubmit={this.handleSearchSubmit} />
-
+          {!hasMore && (
+            <>
+              <div className="NotFound"></div>
+              <Notification
+                message="Whoops, something went wrong"
+                error="No matches found"
+                type="danger"
+              />
+            </>
+          )}
+        </>
         <>
           <InfiniteScroll
             dataLength={images.length}
             next={this.fetchImages}
-            hasMore={true}
+            hasMore={hasMore}
             loader={<Spinner />}
           >
             <ImageGallery

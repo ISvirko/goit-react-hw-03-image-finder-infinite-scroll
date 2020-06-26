@@ -12,8 +12,8 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: #212121;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -34,11 +34,11 @@ ul {
  * Стили компонента App
  */
 .App {
-  background-color: honeydew;
+  background-color: #fffcfa;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
-  /* padding-bottom: 24px; */
+  padding-bottom: 24px;
   position: relative;
 }
 
@@ -82,7 +82,7 @@ ul {
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  background-image: url("https://image.flaticon.com/icons/svg/149/149852.svg");
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -240,7 +240,7 @@ ul {
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
   outline: none;
-  background-image: url('./assets/icon-close.svg');
+  background-image: url("./assets/icon-close.svg");
   background-position: center;
   background-size: 60%;
   background-repeat: no-repeat;
@@ -282,4 +282,15 @@ ul {
 
 .ModalWrapper {
   position: relative;
+}
+
+.NotFound {
+  width: 100vh;
+  height: 100vh;
+  background-color: #fffcfa;
+  background-image: url(./assets/notFound.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
