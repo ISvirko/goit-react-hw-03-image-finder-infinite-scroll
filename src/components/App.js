@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   fetchImages = async () => {
-    const { searchQuery, page, perPage } = this.state;
+    const { searchQuery, page, perPage, images } = this.state;
     this.setState({ hasMore: true });
 
     try {
@@ -53,7 +53,7 @@ class App extends Component {
       this.setState((prev) => ({
         images: [...prev.images, ...result.data.hits],
         page: prev.page + 1,
-        hasMore: result.data.total > 0 ? true : false,
+        hasMore: images.length < result.data.total ? true : false,
       }));
     } catch (error) {
       console.log(error);
@@ -80,7 +80,6 @@ class App extends Component {
     this.setState((prev) => ({ atTheTop: !prev.atTheTop }));
     this.state.atTheTop ? smoothScroll() : window.scrollTo(0, 0);
   };
-
   render() {
     const { images, error, largeImg, atTheTop, hasMore } = this.state;
 
@@ -96,11 +95,11 @@ class App extends Component {
         <>
           <Searchbar onSubmit={this.handleSearchSubmit} />
 
-          {!hasMore && (
+          {!hasMore && !images.length && (
             <>
               <div className="NotFound"></div>
               <Notification
-                message="Whoops, something went wrong"
+                message="Please enter another query"
                 error="No matches found"
                 type="danger"
               />
@@ -108,21 +107,26 @@ class App extends Component {
           )}
         </>
         <>
-          <InfiniteScroll
-            dataLength={images.length}
-            next={this.fetchImages}
-            hasMore={hasMore}
-            loader={<Spinner />}
-          >
-            <ImageGallery
-              images={images}
-              onGetLargeImageUrl={this.getLargeImageUrl}
-            />
-          </InfiniteScroll>
-
           {images.length > 0 && (
-            <ToTopButton atTheTop={atTheTop} toggleButton={this.toggleButton} />
+            <InfiniteScroll
+              dataLength={images.length}
+              next={this.fetchImages}
+              hasMore={hasMore}
+              loader={<Spinner />}
+              endMessage={
+                <p style={{ textAlign: "center" }}>
+                  <b>Yay! You have seen it all</b>
+                </p>
+              }
+            >
+              <ImageGallery
+                images={images}
+                onGetLargeImageUrl={this.getLargeImageUrl}
+              />
+            </InfiniteScroll>
           )}
+
+          <ToTopButton atTheTop={atTheTop} toggleButton={this.toggleButton} />
 
           {largeImg && (
             <Modal onCloseModal={this.closeModal}>

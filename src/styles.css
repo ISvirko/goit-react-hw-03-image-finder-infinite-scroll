@@ -284,6 +284,10 @@ ul {
   position: relative;
 }
 
+.LargeImg {
+  height: 95vh;
+}
+
 .NotFound {
   width: 100vh;
   height: 100vh;
