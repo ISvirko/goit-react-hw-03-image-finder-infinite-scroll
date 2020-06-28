@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f08fbeaed26560cbdc9e87859345da5",
+    "revision": "528ef9c3b23c65181d369e241e591053",
     "url": "/goit-react-hw-03-image-finder-infinite-scroll/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/2.1b60f930.chunk.css"
   },
   {
-    "revision": "7c06ca7e1249e0b56413",
-    "url": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/main.f48b6923.chunk.css"
+    "revision": "78b258319c5a5c242a23",
+    "url": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/main.3b8d1cf9.chunk.css"
   },
   {
     "revision": "6b727fec0b3d6df89eae",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/2.06d1d934.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c06ca7e1249e0b56413",
-    "url": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/main.004ac5d1.chunk.js"
+    "revision": "78b258319c5a5c242a23",
+    "url": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/main.3cd5d23d.chunk.js"
   },
   {
     "revision": "7a3636549f1b0d50dad0",

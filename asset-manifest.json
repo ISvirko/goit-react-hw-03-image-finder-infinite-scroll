@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/main.f48b6923.chunk.css",
-    "main.js": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/main.004ac5d1.chunk.js",
-    "main.js.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/main.004ac5d1.chunk.js.map",
+    "main.css": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/main.3b8d1cf9.chunk.css",
+    "main.js": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/main.3cd5d23d.chunk.js",
+    "main.js.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/main.3cd5d23d.chunk.js.map",
     "runtime-main.js": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/runtime-main.1ad09aa1.js",
     "runtime-main.js.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/runtime-main.1ad09aa1.js.map",
     "static/css/2.1b60f930.chunk.css": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/2.1b60f930.chunk.css",
     "static/js/2.06d1d934.chunk.js": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/2.06d1d934.chunk.js",
     "static/js/2.06d1d934.chunk.js.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/2.06d1d934.chunk.js.map",
     "index.html": "/goit-react-hw-03-image-finder-infinite-scroll/index.html",
-    "precache-manifest.f30873bd1d129e2ee29197449017a51a.js": "/goit-react-hw-03-image-finder-infinite-scroll/precache-manifest.f30873bd1d129e2ee29197449017a51a.js",
+    "precache-manifest.e3e36c61671fec34aab6fa46a80d3460.js": "/goit-react-hw-03-image-finder-infinite-scroll/precache-manifest.e3e36c61671fec34aab6fa46a80d3460.js",
     "service-worker.js": "/goit-react-hw-03-image-finder-infinite-scroll/service-worker.js",
     "static/css/2.1b60f930.chunk.css.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/2.1b60f930.chunk.css.map",
-    "static/css/main.f48b6923.chunk.css.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/main.f48b6923.chunk.css.map",
+    "static/css/main.3b8d1cf9.chunk.css.map": "/goit-react-hw-03-image-finder-infinite-scroll/static/css/main.3b8d1cf9.chunk.css.map",
     "static/js/2.06d1d934.chunk.js.LICENSE.txt": "/goit-react-hw-03-image-finder-infinite-scroll/static/js/2.06d1d934.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/goit-react-hw-03-image-finder-infinite-scroll/static/media/notFound.60ab47d3.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.1ad09aa1.js",
     "static/css/2.1b60f930.chunk.css",
     "static/js/2.06d1d934.chunk.js",
-    "static/css/main.f48b6923.chunk.css",
-    "static/js/main.004ac5d1.chunk.js"
+    "static/css/main.3b8d1cf9.chunk.css",
+    "static/js/main.3cd5d23d.chunk.js"
   ]
 }

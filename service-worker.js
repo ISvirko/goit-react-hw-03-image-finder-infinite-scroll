@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/goit-react-hw-03-image-finder-infinite-scroll/precache-manifest.f30873bd1d129e2ee29197449017a51a.js"
+  "/goit-react-hw-03-image-finder-infinite-scroll/precache-manifest.e3e36c61671fec34aab6fa46a80d3460.js"
 );
 
 self.addEventListener('message', (event) => {
